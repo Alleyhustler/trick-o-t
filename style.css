@@ -1,0 +1,236 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Creepster', cursive; /* Spooky font for the entire website */
+}
+
+/* Full-screen Background GIF */
+body {
+  background: url('giphy.gif') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for readability */
+  color: #f1c40f;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  color: #f39c12;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px #000;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.choice-btn {
+  padding: 15px 40px;
+  font-size: 1.5rem;
+  border: 2px solid #f39c12;
+  background: none;
+  color: #f1c40f;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choice-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #f39c12;
+}
+
+.instructions {
+  margin-top: 15px;
+  font-style: italic;
+  color: #f39c12;
+}
+
+/* Button Hover Effects */
+#trickBtn:hover {
+  color: #c0392b;
+  border-color: #c0392b;
+}
+
+#treatBtn:hover {
+  color: #27ae60;
+  border-color: #27ae60;
+}
+
+/* Fade Effect */
+.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+/* Error Page Styles */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000000;
+  color: #ff4c4c;
+  text-align: center;
+  animation: flicker 0.15s infinite alternate; /* Flashing background */
+}
+
+.error-text {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ff4c4c;
+  text-shadow: 3px 3px 0px #000, -3px -3px 0px #ff4c4c;
+  animation: glitch 1s infinite alternate;
+}
+
+.error-message {
+  font-size: 1.5rem;
+  color: #ff4c4c;
+  animation: glitch 0.8s infinite alternate;
+}
+
+.go-back-btn {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #f1c40f;
+  border: 2px solid #f1c40f;
+  background: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.go-back-btn:hover {
+  color: #ff4c4c;
+  box-shadow: 0 0 10px #ff4c4c;
+}
+
+/* Glitch and Flicker Animations */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-5px, -5px);
+  }
+  40% {
+    transform: translate(5px, 5px);
+  }
+  60% {
+    transform: translate(-5px, 5px);
+  }
+  80% {
+    transform: translate(5px, -5px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    background-color: #000000;
+  }
+  50% {
+    background-color: #550000;
+  }
+  100% {
+    background-color: #000000;
+  }
+}
+
+/* Treat Page Styles */
+.treat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #2c3e50;
+  text-align: center;
+  padding: 20px;
+  background: url('f608ed3caa01c87e8ba88cd4c2b4e9d4.gif') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  background-blend-mode: overlay;
+  background-color: rgba(255, 255, 255, 0.85); /* Light overlay for text readability */
+}
+
+
+.congrats-text {
+  font-size: 3rem;
+  color: #27ae60;
+  margin-bottom: 15px;
+}
+
+.treat-message {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  max-width: 600px;
+  color: #34495e;
+}
+
+.buy-tot-btn {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background-color: #e67e22;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.buy-tot-btn:hover {
+  background-color: #d35400;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.social-icon img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+  transform: scale(1.1);
+}
